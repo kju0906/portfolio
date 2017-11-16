@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=300)
     text = models.TextField()
     created_date = models.DateTimeField(
             default=timezone.now)
@@ -19,7 +19,7 @@ class Post(models.Model):
         return self.title
 
 class BlogData(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=300)
     link = models.URLField()
     text = models.TextField()
     created_date = models.DateTimeField(
